@@ -3,4 +3,4 @@
  - [x] Salvarea datelor in fisier txt
  - [x] Calcularea mediei si numarului de credite
  - [x] Cautarea/stergerea dupa ID
- - [ ] Implementat acelasi lucru in Java
+ - [x] Implementat acelasi lucru in Java
