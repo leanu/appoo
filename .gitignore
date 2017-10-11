@@ -33,3 +33,10 @@
 
 # Compiled class file
 *.class
+
+# Doc files
+*.txt
+*.pdf
+*.aux
+*.log
+*.png
