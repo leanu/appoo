@@ -17,7 +17,9 @@ public class Student {
     private double mediaGenerala;
     private int credite;
 
-    void Student(String nume, String prenume, long IDNP, int promotia, String grupa, int notaAM, int notaPC, int notaA, int notaBI, int notaE){
+    public Student() {}
+    
+    public Student(String nume, String prenume, long IDNP, int promotia, String grupa, int notaAM, int notaPC, int notaA, int notaBI, int notaE){
         this.nume = nume;
         this.prenume = prenume;
         this.IDNP = IDNP;
@@ -51,7 +53,7 @@ public class Student {
         int notaA = Integer.parseInt(c.readLine("nota Algoritmica:"));
         int notaBI = Integer.parseInt(c.readLine("nota Bazele Informaticii:"));
         int notaE = Integer.parseInt(c.readLine("nota Engleza:"));
-        Student student = Student(nume,prenume,IDNP,promotia,grupa,notaAM,notaPC,notaA,notaBI,notaE);
+        Student student = new Student(nume,prenume,IDNP,promotia,grupa,notaAM,notaPC,notaA,notaBI,notaE);
         return student;
     }
 
