@@ -1,5 +1,7 @@
+import java.lang.Integer;
 import java.lang.String;
 import java.util.ArrayList;
+import java.io.Console;
 
 public class Student {
     private String nume;
@@ -37,25 +39,26 @@ public class Student {
     }
 
 
-    private static Student read() {
+    private Student read() {
         Console c = System.console();
         String nume = c.readLine("Numele:");
         String prenume = c.readLine("Prenumele:");
-        long IDNP = c.readLine("IDNP:");
-        int promotia = c.readLine("promotia:");
+        long IDNP = Integer.parseInt(c.readLine("IDNP:"));
+        int promotia = Integer.parseInt(c.readLine("promotia:"));
         String grupa = c.readLine("grupa:");
-        int notaAM = c.readLine("nota Analiza Matematica:");
-        int notaPC = c.readLine("nota Programarea C:");
-        int notaA = c.readLine("nota Algoritmica:");
-        int notaBI = c.readLine("nota Bazele Informaticii:");
-        int notaE = c.readLine("nota Engleza:");
-        Student student = new Student(nume,prenume,IDNP,promotia,grupa,notaAM,notaPC,notaA,notaBI,notaE);
+        int notaAM = Integer.parseInt(c.readLine("nota Analiza Matematica:"));
+        int notaPC = Integer.parseInt(c.readLine("nota Programarea C:"));
+        int notaA = Integer.parseInt(c.readLine("nota Algoritmica:"));
+        int notaBI = Integer.parseInt(c.readLine("nota Bazele Informaticii:"));
+        int notaE = Integer.parseInt(c.readLine("nota Engleza:"));
+        Student student = Student(nume,prenume,IDNP,promotia,grupa,notaAM,notaPC,notaA,notaBI,notaE);
         return student;
     }
 
     public static void main(String[] args) {
         ArrayList<Student> arrayList = new ArrayList<Student>();
-        arrayList.add(read());
+        Student temp = new Student();
+        arrayList.add(temp.read());
         System.out.println("hello world");
         System.out.println(arrayList.size());
     }
