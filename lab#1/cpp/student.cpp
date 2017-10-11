@@ -78,7 +78,9 @@ int main(){
         }
         pos+=1;
     }
-    students.erase(students.begin()+pos);
+    if(pos>=0) {
+        students.erase(students.begin()+pos);
+    }
     cout<<"numarul de studenti:"<<students.size()<<endl;
 
     myfile.open("students.txt");
