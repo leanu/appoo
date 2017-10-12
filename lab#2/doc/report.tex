@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+
+\usepackage[left=2cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{indentfirst} % sa fie alineat la primul alineat
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+
+\frenchspacing
+
+\setcounter{secnumdepth}{2}
+
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\makeatother
+
+\begin{document}
+\lstset{language=C++,
+    basicstyle=\linespread{0.7}\ttfamily,
+    keywordstyle=\color{blue}\ttfamily,
+    stringstyle=\color{red}\ttfamily,
+    commentstyle=\color{green}\ttfamily,
+    showstringspaces=false,
+    breaklines=true } % for listings
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+\center 
+ 
+
+\textsc{\LARGE Universitatea Tehnic\u{a} a Moldovei}\\[0.8cm] 
+\textsc{\Large Facultatea Calculatoare, Informatic\u{a} \c{s}i Microelectronic\u{a}}\\[0.5cm] 
+\textsc{\large Catedra Automatic\u{a} \c{s}i Tehnologii Informa\c{t}ionale}\\[5.2cm] 
+
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Laborator \#2}\\[0.3cm]
+{\large la Analiza, Proiectarea \c{s}i Programarea Obiect Orientat\v{a}}\\
+{\large Supra\^{i}nc\v{a}rcarea operatorilor}\\[0.4cm] 
+\HRule \\[5.5cm]
+ 
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Elaborat:}\\
+st.gr TI-141(fr) Iulian \textsc{Ma\c{s}aev} 
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Verificat:} \\
+lector universitar Inga \textsc{Lisnic} 
+\end{flushright}
+\end{minipage}\\[4cm]
+
+
+\vfill 
+{\large Chi\c{s}in\u{a}u, \the\year}\\[3cm] 
+
+
+
+\end{titlepage}
+
+%\input{teorie.tex}
+\input{sarcina.tex}
+\input{mersul.tex}
+%\input{intrebari.tex}
+\input{concluzie.tex}
+\input{listings.tex}
+
+\end{document}
