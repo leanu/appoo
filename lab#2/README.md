@@ -8,5 +8,5 @@
 #### Java:
  - [x] Creat clasa cu membru privat vector unidimensional de numere intregi, dimensiune variabila
  - [x] Redefinit metoda **toString()**, care sa afiseze numerele continute
- - [ ] In functia **main()** construiti un obiect din clasa creata cu numerele (2,9,4,5,7,8)
- - [ ] Utilizarea metodei **toString()**
+ - [x] In functia **main()** construiti un obiect din clasa creata cu numerele (2,9,4,5,7,8)
+ - [x] Utilizarea metodei **toString()**
