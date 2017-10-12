@@ -2,6 +2,7 @@
 #define OM_H_INCLUDED
 #include <iostream>
 #include <string>
+using namespace std;
 class om {
     private:
         string nume;

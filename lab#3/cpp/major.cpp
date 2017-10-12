@@ -1,4 +1,5 @@
 #include "major.h"
+#include <iostream>
 
 using namespace std;
 
@@ -6,17 +7,17 @@ major::major(){
     nrPasaport = 100000000;
 };
 
-major::major(float nrPasaport){
+major::major(long nrPasaport){
     this->set(nrPasaport);
 };
 
-void major::set(float nrPasaport){
+void major::set(long nrPasaport){
     if(nrPasaport>0) {
-        nrPasaport = nrPasaport % 1;
+        nrPasaport = nrPasaport;
     }
 };
 
-ostream& operator<<(ostream& os, const major& major) {
+ostream& operator<<(ostream& os, major& major) {
     os << major.nrPasaport<<":"<<major.toString();
     return os;
 }
