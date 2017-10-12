@@ -34,3 +34,8 @@ om& om::operator=(om& o) {
     om* = new om(o.nume, o.virsta, o.greutate);
     return *om;
 }
+
+string om::toString() {
+    string str = format("%s, %d ani, %d kg\n", nume, virsta, greutate);
+    return str;
+}
