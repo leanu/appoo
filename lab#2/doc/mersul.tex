@@ -1,1 +1,74 @@
 \subsection{Elaborarea lucr\u{a}rii}
+La sarcina cu matricile am definit o clasa cu 2 atribute private: pointer 
+la pointer(pentru a lucra cu matricea propriu zis) \c{s}i un parametru 
+care indic\v{a} dimensiunea matricii, strict necesar la opera\c{t}ia 
+\^{i}ntre matrici. Nu este posibil de adunat/sc\v{a}zut dou\v{a} matrici 
+de dimensiuni diferite, \c{s}i pentru a evita segmentare de memorie sau alte
+probleme - am introdus verificarea compatibilit\v{a}\c{t}ii.
+
+Am ad\v{a}ugat metodele necesare sarcinii prin overload la operatori:\\
+\texttt{matrix\& operator+(matrix\& B);}, constructori(f\v{a}r\v{a} parametri,
+cu parametru), metode de intrare \c{s}i ie\c{s}ire pentru a vedea mai
+u\c{s}or rezultatul execu\c{t}iei.\\
+
+Pentru Java sarcina a fost simpl\v{a}. Am creat dou\v{a} clase - una pentru
+lucrul cu lista de numere intregi, \c{s}i o clasa cu punctul de intrare, 
+similar la \textbf{main()} din C++. Deoarece ambele clase sunt \^{i}n 
+acela\c{s}i folder - nu este nevoie de importat explicit clasa creat\v{a},
+ea se afla \^{i}n acela\c{s}i classpath, dar pentru proiecte mai mari ar
+fi nevoie de indicat package-urile, import-urile din alte package-uri etc.
+Ca verificare a metodei \textbf{toString()} am rulat metoda de 2 ori - 
+odat\v{a} metoda predefinit\v{a} pe clasa \textbf{ArrayList}, \c{s}i 
+metoda redefini\v{a} pe clasa creata \textbf{Lista}.
+
+Rezultatul execu\c{t}iei programului Java:
+\begin{verbatim}
+[2, 9, 4, 5, 7, 8]
+{2, 9, 4, 5, 7, 8}
+\end{verbatim}
+
+Rularea programului C++:
+\begin{verbatim}
+Introdu dimensiunea matricelor:3
+Introdu prima matrice
+A[0][0]:1
+A[0][1]:2
+A[0][2]:3
+A[1][0]:4
+A[1][1]:5
+A[1][2]:6
+A[2][0]:7
+A[2][1]:8
+A[2][2]:9
+Introdu a doua matrice
+A[0][0]:2
+A[0][1]:3
+A[0][2]:6
+A[1][0]:5
+A[1][1]:7
+A[1][2]:8
+A[2][0]:9
+A[2][1]:1
+A[2][2]:2
+Ati introdus:
+    1   2   3
+    4   5   6
+    7   8   9
+a doua matrice:
+    2   3   6
+    5   7   8
+    9   1   2
+suma matricelor:
+    3   5   9
+    9   12  14
+    16  9   11
+diferenta matricelor:
+    -1  -1  -3
+    -1  -2  -2
+    -2  7   7
+transpusa primei matrici:
+    1   4   7
+    2   5   8
+    3   6   9
+\end{verbatim}
+
