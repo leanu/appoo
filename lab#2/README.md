@@ -1,7 +1,7 @@
 ### Sarcina:
 #### C++:
- - [ ] Creat clasa matrice
- - [ ] Citirea matricei de la tastatura
+ - [x] Creat clasa matrice
+ - [x] Citirea matricei de la tastatura
  - [ ] Definit metodele pentru scadere, adunare, transpusa
  - [ ] Folosit supraincarcarea operatorilor
 
