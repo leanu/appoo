@@ -13,7 +13,7 @@ class matrix
         void set(int row, int col, long k);
         matrix& operator+(matrix& B);
         matrix& operator-(matrix& B);
-        void operator^(matrix& B);// transpusa
+        matrix& operator!();// transpusa
         ~matrix();
         void input();
         void output();

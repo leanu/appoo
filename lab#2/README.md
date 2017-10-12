@@ -2,8 +2,8 @@
 #### C++:
  - [x] Creat clasa matrice
  - [x] Citirea matricei de la tastatura
- - [ ] Definit metodele pentru scadere, adunare, transpusa
- - [ ] Folosit supraincarcarea operatorilor
+ - [x] Definit metodele pentru scadere, adunare, transpusa
+ - [x] Folosit supraincarcarea operatorilor
 
 #### Java:
  - [ ] Creat clasa cu membru privat vector unidimensional de numere intregi, dimensiune variabila

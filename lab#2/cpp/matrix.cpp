@@ -86,4 +86,21 @@ matrix& matrix::operator-(matrix& B) {
         }
     }
     return *O;
-}
+};
+
+matrix& matrix::operator!() {
+    int i, j;
+    matrix *O;
+    O = new matrix(size);
+    for(i=0; i<size; i++) {
+        for(j=0; j<size; j++) {
+            O->set(j,i,A[i][j]);
+        }
+    }
+    for(i=0; i<size; i++) {
+        for(j=0; j<size; j++) {
+            A[i][j]=O->A[i][j];
+        }
+    }
+    return *this;
+};

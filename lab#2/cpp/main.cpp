@@ -27,5 +27,8 @@ int main(){
     cout<<"diferenta matricelor:"<<endl;
     *O = *M - *N;
     O->output();
+    cout<<"transpusa primei matrici:"<<endl;
+    !(*M);
+    M->output();
     return 0;
 }
