@@ -53,3 +53,17 @@ void matrix::output() {
         cout<<endl;
     }
 };
+
+matrix& matrix::operator+(matrix& B) {
+    int i, j;
+    if(size!=B.size) {
+        cout<<"ERROR: Matricile au dimensiuni diferite";
+        return *this;
+    }
+    for(i=0; i<size; i++) {
+        for(j=0; j<size; j++) {
+            A[i][j]+=B.A[i][j];
+        }
+    }
+    return *this;
+}
