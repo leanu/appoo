@@ -3,9 +3,11 @@ import java.lang.String;
 import java.util.ArrayList;
 
 public class Lista {
-    private ArrayList<Integer> vector = new ArrayList<Integer>();
+    private ArrayList<Integer> vector;
 
-    public Lista() {}
+    public Lista() {
+        vector = new ArrayList<Integer>();
+    }
 
     public Lista(ArrayList<Integer> vector) {
         this.vector = vector;
