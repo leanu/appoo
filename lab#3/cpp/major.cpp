@@ -11,9 +11,9 @@ major::major(long nrPasaport){
     this->set(nrPasaport);
 };
 
-void major::set(long nrPasaport){
-    if(nrPasaport>0) {
-        nrPasaport = nrPasaport;
+void major::set(long nrPass){
+    if(nrPass>0) {
+        nrPasaport = nrPass;
     }
 };
 
