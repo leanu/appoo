@@ -37,7 +37,7 @@ om& om::operator=(om& o) {
     return *temp;
 }
 
-string om::toString() {
+string om::toString() const{
     stringstream sstm;
     sstm<<nume<<", "<<virsta<<" ani, "<<greutate<<" kg"<<endl;
     string str = sstm.str();

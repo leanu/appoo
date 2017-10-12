@@ -13,7 +13,7 @@ class om {
         om(string nume);
         om(string nume, int virsta, int greutate);
         ~om();
-        string toString(); 
+        string toString() const; 
         om& operator=(om& o);
 };
 #endif //OM_H_INCLUDED

@@ -12,6 +12,6 @@ class major : public om {
         ~major();
         
         void set(long nrPasaport);
-        friend ostream& operator<<(ostream& os, major& major);
+        friend ostream& operator<<(ostream& os, const major& major);
 };
 #endif //MAJOR_H_INCLUDED

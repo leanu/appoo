@@ -17,7 +17,7 @@ void major::set(long nrPasaport){
     }
 };
 
-ostream& operator<<(ostream& os, major& major) {
+ostream& operator<<(ostream& os, const major& major) {
     os << major.nrPasaport<<":"<<major.toString();
     return os;
 }
