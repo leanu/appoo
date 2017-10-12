@@ -31,7 +31,9 @@ matrix::~matrix() {
     }
     delete [] A;
 };
-
+void matrix::set(int i, int j, long k) {
+    A[i][j]=k;
+};
 void matrix::input() {
     int i, j;
     long k;
@@ -56,14 +58,32 @@ void matrix::output() {
 
 matrix& matrix::operator+(matrix& B) {
     int i, j;
+    matrix *O;
+    O = new matrix(size);
     if(size!=B.size) {
         cout<<"ERROR: Matricile au dimensiuni diferite";
         return *this;
     }
     for(i=0; i<size; i++) {
         for(j=0; j<size; j++) {
-            A[i][j]+=B.A[i][j];
+            O->set(i,j,A[i][j]+B.A[i][j]);
         }
     }
-    return *this;
+    return *O;
+};
+
+matrix& matrix::operator-(matrix& B) {
+    int i, j;
+    matrix *O;
+    O = new matrix(size);
+    if(size!=B.size) {
+        cout<<"ERROR: Matricile au dimensiuni diferite";
+        return *this;
+    }
+    for(i=0; i<size; i++) {
+        for(j=0; j<size; j++) {
+            O->set(i,j,A[i][j]-B.A[i][j]);
+        }
+    }
+    return *O;
 }

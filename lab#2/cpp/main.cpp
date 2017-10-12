@@ -24,5 +24,8 @@ int main(){
     cout<<"suma matricelor:"<<endl;
     *O = *M + *N;
     O->output();
+    cout<<"diferenta matricelor:"<<endl;
+    *O = *M - *N;
+    O->output();
     return 0;
 }
