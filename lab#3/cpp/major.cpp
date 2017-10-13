@@ -8,13 +8,17 @@ major::major(){
 };
 
 major::major(long nrPasaport){
-    this->set(nrPasaport);
+    this->setnrPasaport(nrPasaport);
 };
 
-void major::set(long nrPass){
+void major::setnrPasaport(long nrPass){
     if(nrPass>0) {
         nrPasaport = nrPass;
     }
+};
+
+long major::getnrPasaport() {
+    return nrPasaport;
 };
 
 ostream& operator<<(ostream& os, const major& major) {

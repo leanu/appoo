@@ -12,5 +12,8 @@ int main() {
 
     Anatol = new major(1003432);
     cout<<*Anatol;
+    Anatol->setnrPasaport(20084005);
+    cout<<*Anatol;
+    cout<<Anatol->getnrPasaport();
     return 0;
 }
