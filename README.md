@@ -1,3 +1,3 @@
 ## Repo for APPOO lab works
 
-![Progress](http://progressed.io/bar/37?title=completed)
+![Progress](http://progressed.io/bar/43?title=completed)
