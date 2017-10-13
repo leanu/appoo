@@ -31,7 +31,18 @@ om::om(string n, int v, int g) {
         greutate = 70;
     }
 };
+void om::setVirsta(int v) {
+    if(v>=0 and v<=120) {
+        virsta = v;
+    }
+    else {
+        virsta = 25;
+    }
+};
 
+int om::getVirsta() {
+    return virsta;
+};
 om& om::operator=(om& o) {
     om* temp = new om(o.nume, o.virsta, o.greutate);
     return *temp;

@@ -14,6 +14,8 @@ class om {
         om(string nume, int virsta, int greutate);
         ~om();
         string toString() const; 
+        void setVirsta(int v);
+        int getVirsta();
         om& operator=(om& o);
 };
 #endif //OM_H_INCLUDED
