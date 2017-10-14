@@ -1,0 +1,13 @@
+\subsection{Elaborarea lucr\u{a}rii}
+Am scris \c{s}i executat codul exemplu de lucru cu streamurile ByteArray. La ie\c{s}ire am primit
+multe simboluri nedescifrabile. Adic\v{a} simboluri ASCII de control care nu pot fi afi\c{s}ate
+sau se afi\c{s}eaza gre\c{s}it, apoi simbolurile 32-126, \c{s}i deja p\^{i}n\v{a} la 255 simboluri neutilizate. Rezultatul execu\c{t}iei:
+\begin{verbatim}
+ 0 1 2 3 4 5 6 7 8 9
+
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvw
+ xyz{|}~
+\end{verbatim}
+
+Streamurile pot fi folosite pentru comunicarea asincron\v{a} \^{i}ntre obiecte, dar \c{s}i
+pentru interac\c{t}iunea cu dispozitivele de intrare/ie\c{s}ire indiferent de platform\v{a}.
