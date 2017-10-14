@@ -1,3 +1,4 @@
+import java.io.ByteArrayInputStream;
 import java.lang.Integer;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,5 +9,6 @@ public class Main {
         Lista lista = new Lista(vector);
         System.out.println(vector.toString());//default method
         System.out.println(lista.toString()); //metoda redefinita
+        ByteArrayInputStream
     }
 }
