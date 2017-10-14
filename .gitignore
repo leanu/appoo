@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 *.swp
+*.idea/**
+*.gradle/**
 
 # Compiled Object files
 *.slo
