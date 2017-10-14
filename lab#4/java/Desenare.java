@@ -1,5 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.lang.System;
+
 public class Desenare extends Frame{
     private Panel selPanel;
     private Choice sel;
@@ -85,10 +89,27 @@ public class Desenare extends Frame{
             canvas.repaint();
         }
     }
+    // clasa de ascultare a clickurilor de mouse
+    class MA extends MouseAdapter {
+        public void mousePressed(MouseEvent event) {
+            System.out.println("mouse pressed");
+        }
+    }
 
     // Clasa pentru canvas
     class MyCanvas extends Canvas{
+        private int dx;
+        private int dy;
+        private int width;
+        private int height;
         public transient Image img = null;
+        public MyCanvas() {
+            dx=75;
+            dy=67;
+            width=150;
+            height=135;
+            addMouseListener(new MA());
+        }
         public void paint(Graphics g){
             String culoare = sel.getSelectedItem();
             Color color = genCuloare(culoare);
@@ -101,8 +122,8 @@ public class Desenare extends Frame{
             String figura = lista.getSelectedItem();
             if (figura.equals("Linie"))
                 g.drawLine(cx/2,cy/2,3*cx/2,3*cy/2);
-            else if (figura.equals("Dreptunghi"))
-                g.fillRect(cx/2,cy/2,cx,cy);
+            else if (figura.equals("Dreptunghi")) {
+                g.fillRect(dx,dy,width,height);}
             else if (figura.equals("Oval"))
                 g.fillOval(cx/2,cy/2,cx,cy);
             else if (figura.equals("Text"))
