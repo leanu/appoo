@@ -1,0 +1,6 @@
+\subsection{Concluzii:}
+RMI este un mecanism de comunicare distribuit\v{a} \^{i}ntre diferite noduri de calcul, 
+ofer\v{a} apelarea direct\v{a} a metodelor, dar totu\c{s}i au fost create instrumente
+mai slab cuplate \c{s}i mai feazibile - brokeri de mesaje(ActiveMQ, IBM Websphere MQ, Oracle WebLogic etc) care deasupra TCP/IP transmit mesajele de la un proces la altul, de la un serviciu la altul, f\v{a}r\v{a} a bloca aplica\c{t}ia client(\^{i}n caz c\^{a} apelul remote nu se face
+din thread aparte). Prin JMS se pot transmite date xml, json, zip, binar, etc, far\v{a} limite
+dup\v{a} tipul obiectului la folosirea RMI.

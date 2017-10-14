@@ -1,0 +1,40 @@
+\subsection{Elaborarea lucr\u{a}rii}
+Am creat confrom exemplului interfa\c{t}a \emph{Iulian}, clasa \emph{IulianServer} ce
+o implementeaz\v{a}, \c{s}i clasa \emph{IulianApp} care va \^{i}ncerca s\v{a} s\v{a} invoce
+metoda \textbf{sayHello()}. De asemenea am creat fi\c{s}ierul AllPolicy.policy
+\begin{verbatim}
+grant {
+    permission java.security.AllPermission;
+};
+\end{verbatim}
+f\v{a}r\v{a} d\^{i}nsul \^{i}ntradev\v{a}r primeam excep\c{t}ie:
+\begin{verbatim}
+java.security.AccessControlException: access denied ("java.net.SocketPermission"
+ "127.0.0.1:1099" "connect,resolve")
+\end{verbatim}
+\begin{enumerate}
+    \item{Am generat clasa \emph{IulianServer\_Stub}:
+\begin{verbatim}
+$ rmic IulianServer
+Warning: generation and use of skeletons and static stubs for JRMP
+is deprecated. Skeletons are unnecessary, and static stubs have
+been superseded by dynamically generated stubs. Users are
+encouraged to migrate away from using rmic to generate skeletons and static
+stubs. See the documentation for java.rmi.server.UnicastRemoteObject.
+\end{verbatim}
+    Am consultat documenta\c{t}ia, \c{s}i \^{i}ntradev\v{a}r de la java 1.5+ acest pas nu este necesar.}
+    \item{Am pornit \emph{rmiregistry}}
+    \item{Am pornit serverul creat:
+\begin{verbatim}
+$ java -Djava.security.policy=AllPolicy.policy IulianServer
+IulianServer : Inregistrare...[Ok]
+\end{verbatim}}
+    \item{Am rulat aplica\c{t}ia client:
+\begin{verbatim}
+$ java -Djava.security.policy=AllPolicy.policy IulianApp
+Hello from Iulian RMI server!
+\end{verbatim}}
+\end{enumerate}
+
+Rularea pe 2 calculatoare trebuie s\v{a} fie la fel posibil\v{a}, dar necesit\v{a} timp pentru configurare, instalarea jdk(sunt posibile probleme la RMI c\^{i}nd pe "server" si "client" sunt diferite versiuni java, sau java de la diferi\c{t}i vendori), configurarea re\c{t}elei, etc.
+
