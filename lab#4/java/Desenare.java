@@ -92,7 +92,9 @@ public class Desenare extends Frame{
     // clasa de ascultare a clickurilor de mouse
     class MA extends MouseAdapter {
         public void mousePressed(MouseEvent event) {
-            System.out.println("mouse pressed");
+            canvas.setWidth(event.getX()-canvas.getDx());
+            canvas.setHeight(event.getY()-canvas.getDy());
+            canvas.repaint();
         }
     }
 
@@ -110,6 +112,23 @@ public class Desenare extends Frame{
             height=135;
             addMouseListener(new MA());
         }
+
+        public int getDx() {
+            return dx;
+        }
+
+        public int getDy() {
+            return dy;
+        }
+
+        public void setWidth(int width) {
+            this.width = width;
+        }
+
+        public void setHeight(int height) {
+            this.height = height;
+        }
+
         public void paint(Graphics g){
             String culoare = sel.getSelectedItem();
             Color color = genCuloare(culoare);
