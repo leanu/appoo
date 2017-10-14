@@ -1,3 +1,5 @@
+import javax.swing.*;
+import javax.swing.SwingUtilities;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.MouseAdapter;
@@ -90,26 +92,20 @@ public class Desenare extends Frame{
             canvas.repaint();
         }
     }
-    // clasa de ascultare a clickurilor de mouse
-    class MA extends MouseAdapter {
-        public void mousePressed(MouseEvent event) {
-            if(event.getButton()==MouseEvent.BUTTON3) {
-                canvas.setWidth(event.getX() - canvas.getDx());
-                canvas.setHeight(event.getY() - canvas.getDy());
-                canvas.repaint();
-            }
-        }
-    }
 
     // clasa de ascultare a miscarii mouseului
     class MMA extends MouseMotionAdapter {
         public void mouseDragged(MouseEvent event) {
-            if((event.getX()-canvas.getDx())<canvas.getWidth()) {
-                if((event.getY() - canvas.getDy()) <canvas.getHeight()) {
-                    canvas.setDx(event.getX());
-                    canvas.setDy(event.getY());
-                    canvas.repaint();
-                }
+            if(SwingUtilities.isLeftMouseButton(event)) {
+                canvas.setDx(event.getX());
+                canvas.setDy(event.getY());
+                canvas.repaint();
+
+            }
+            else if(SwingUtilities.isRightMouseButton(event) ) {
+                canvas.setWidth(event.getX() - canvas.getDx());
+                canvas.setHeight(event.getY() - canvas.getDy());
+                canvas.repaint();
             }
         }
     }
@@ -126,7 +122,6 @@ public class Desenare extends Frame{
             dy=67;
             width=150;
             height=135;
-            addMouseListener(new MA());
             addMouseMotionListener(new MMA());
         }
 
@@ -155,11 +150,11 @@ public class Desenare extends Frame{
         }
 
         public void setWidth(int width) {
-            this.width = width;
+            this.width = (width>10) ? width : 10;
         }
 
         public void setHeight(int height) {
-            this.height = height;
+            this.height = (height>10) ? height : 10;
         }
 
         public void paint(Graphics g){
