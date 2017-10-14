@@ -163,20 +163,17 @@ public class Desenare extends Frame{
             g.setColor(color);
             color = genCuloare(fond.getSelectedItem());
             setBackground(color);
-            Dimension dim = getSize();
-            int cx = dim.width/2;
-            int cy = dim.height/2;
             String figura = lista.getSelectedItem();
             if (figura.equals("Linie"))
-                g.drawLine(cx/2,cy/2,3*cx/2,3*cy/2);
-            else if (figura.equals("Dreptunghi")) {
-                g.fillRect(dx,dy,width,height);}
+                g.drawLine(dx, dy, dx+width, dy+height);
+            else if (figura.equals("Dreptunghi"))
+                g.fillRect(dx, dy, width, height);
             else if (figura.equals("Oval"))
-                g.fillOval(cx/2,cy/2,cx,cy);
+                g.fillOval(dx, dy, width, height);
             else if (figura.equals("Text"))
-                g.drawString("Textul dorit", cx, cy);
+                g.drawString("Textul dorit", dx, dy);
             else if (figura.equals("Imagine"))
-                g.drawImage(img,cx,cy,this);
+                g.drawImage(img, dx, dy, this);
         }
     }
 }
