@@ -7,5 +7,5 @@
  - [x] definiti functiile destinate virstei si numarului pasaportului
 
 #### Java:
- - [ ] Creat si executat doua apleturi descrise in sectiunea 3.2(**HelloWorld** si **HelloNume**)
- - [ ] Pentru fiecare program de scris versiunile care sa asigure functionarea atit ca applet, cit si ca aplicatie independenta
+ - [x] Creat si executat doua apleturi descrise in sectiunea 3.2(**HelloWorld** si **HelloNume**)
+ - [x] Pentru fiecare program de scris versiunile care sa asigure functionarea atit ca applet, cit si ca aplicatie independenta
