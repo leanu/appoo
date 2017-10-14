@@ -1,0 +1,23 @@
+\subsection{Elaborarea lucr\u{a}rii}
+\^{I}n C++ clas\v{a} abstract\v{a} este clasa care are doar metode virtuale. Nu am prins firul
+despre ce este dirijarea, dar am creat clasa abstract\v{a} cu metoda virtual\v{a} \c{s}i respectiv
+dou\v{a} clase descendente care redefinesc aceast\v{a} medot\v{a}. Principiul func\c{t}iilor virtuale
+este simplu - toate func\c{t}iile virtuale se plaseaz\v{a} \^{i}ntrun tabel special, \c{s}i atunci c\^{i}nd
+este chemat\v{a} o func\c{t}ie virtual\v{a} - executarea merge spre codul metodei din clasa careia 
+\^{i}ii apar\c{t}ine obiectul, indiferent de tipul referin\c{t}ei. Astfel am creat dou\v{a} referin\c{t}e de tipul de baz\v{a}, \c{s}i la ambele am chemat func\c{t}ia virtual\v{a}:
+\begin{verbatim}
+Dirijarea liniara
+Dirijarea patratica
+\end{verbatim}
+Astfel se vede cum pentru fiecare obiect este chemat\v{a} metoda caracteristic\v{a} lui. Acest mecanism
+poate fi folosit \^{i}n diferite situa\c{t}ii, atunci c\^{i}nd avem o mul\c{t}ime de obiecte din aceea\c{s}i ierarhie, av\^{i}nd referin\c{t}ele \^{i}ntr-o list\v{a} - chem\v{a}m aceea\c{s}i metod\v{a}, \^{i}ns\v{a}
+la executare deja se va alege metoda corespunz\v{a}toare.
+
+La sarcina cu desenarea figurii, am primit codul care deja lucreaza, dar a trebuit de ad\v{a}ugat
+schimbarea dimensiunilor \c{s}i pozitiei. Pentru aceast\v{a} am ad\v{a}ugat ni\c{s}te parametri 
+adi\c{t}ionali \^{i}n clasa \emph{MyCanvas} pentru a p\v{a}stra dimensiunile figurilor,
+setteri/getteri respectiv. De asemenea am modificat constructorul implicit pentru a ad\v{a}uga
+\emph{MouseMotionListener}. Am observat cum se prelucreaz\v{a} mesajele de la mouse, cum se extrag
+coordonatele, cum de detectat care button este ap\v{a}sat.
+La sf\^{i}r\c{s}it s-a primit modificarea dimensiunilor cu Drag and Drop cu butonul dreapta ap\v{a}sat,
+\c{s}i deplasarea figurii cu butonul st\^{i}nga ap\v{a}sat.
