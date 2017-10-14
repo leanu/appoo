@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 import java.lang.System;
 
 public class Desenare extends Frame{
@@ -92,9 +93,24 @@ public class Desenare extends Frame{
     // clasa de ascultare a clickurilor de mouse
     class MA extends MouseAdapter {
         public void mousePressed(MouseEvent event) {
-            canvas.setWidth(event.getX()-canvas.getDx());
-            canvas.setHeight(event.getY()-canvas.getDy());
-            canvas.repaint();
+            if(event.getButton()==MouseEvent.BUTTON3) {
+                canvas.setWidth(event.getX() - canvas.getDx());
+                canvas.setHeight(event.getY() - canvas.getDy());
+                canvas.repaint();
+            }
+        }
+    }
+
+    // clasa de ascultare a miscarii mouseului
+    class MMA extends MouseMotionAdapter {
+        public void mouseDragged(MouseEvent event) {
+            if((event.getX()-canvas.getDx())<canvas.getWidth()) {
+                if((event.getY() - canvas.getDy()) <canvas.getHeight()) {
+                    canvas.setDx(event.getX());
+                    canvas.setDy(event.getY());
+                    canvas.repaint();
+                }
+            }
         }
     }
 
@@ -111,6 +127,7 @@ public class Desenare extends Frame{
             width=150;
             height=135;
             addMouseListener(new MA());
+            addMouseMotionListener(new MMA());
         }
 
         public int getDx() {
@@ -119,6 +136,22 @@ public class Desenare extends Frame{
 
         public int getDy() {
             return dy;
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
+        public int getHeight() {
+            return height;
+        }
+
+        public void setDx(int dx) {
+            this.dx = dx;
+        }
+
+        public void setDy(int dy) {
+            this.dy = dy;
         }
 
         public void setWidth(int width) {
